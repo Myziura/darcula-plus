@@ -1,0 +1,32 @@
+{
+  "name": "darcula-ts",
+  "displayName": "Darcula Plus",
+  "description": "Darcula Plus Theme",
+  "version": "0.0.1",
+  "type": "module",
+  "watch": {
+    "build": "src/theme.js"
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "node src/build.js"
+  },
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Darcula Plus",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Darcula Plus.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "npm-watch": "^0.11.0"
+  }
+}
