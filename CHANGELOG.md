@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "darcula-ts" extension will be documented in this file.
+All notable changes to the "darcula-plus" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+<!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [0.0.1] – 08.06.2022
+
+### Added
 
 - Initial release
