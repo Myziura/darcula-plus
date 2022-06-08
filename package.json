@@ -4,6 +4,7 @@
   "description": "Darcula Plus Theme",
   "version": "0.0.1",
   "type": "module",
+  "publisher": "myziura",
   "repository": {
     "type": "git",
     "url": "https://github.com/Myziura/darcula-plus"
