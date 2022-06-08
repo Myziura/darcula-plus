@@ -1,6 +1,6 @@
 # Darcula Plus VS Code Theme
 
-## About
+<!-- ## About -->
 
 The theme is not a classic Darcula, because it is based on Dracula theme, so it has some differences. You may like it.
 
