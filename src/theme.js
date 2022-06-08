@@ -181,12 +181,12 @@ export default {
     "editorIndentGuide.activeBackground": COLORS.SELECTION_TRANSPARENT,
     "editorRuler.foreground": COLORS.BORDER,
     "editorCodeLens.foreground": COLORS.GRAY_DARK,
-    "editorBracketHighlight.foreground1": COLORS.GRAY,
-    "editorBracketHighlight.foreground2": COLORS.ORANGE,
-    "editorBracketHighlight.foreground3": COLORS.BLUE,
+    "editorBracketHighlight.foreground1": COLORS.YELLOW,
+    "editorBracketHighlight.foreground2": COLORS.YELLOW, //COLORS.ORANGE,
+    "editorBracketHighlight.foreground3": COLORS.YELLOW, // COLORS.BLUE,
     "editorBracketHighlight.foreground4": COLORS.YELLOW,
-    "editorBracketHighlight.foreground5": COLORS.PURPLE,
-    "editorBracketHighlight.foreground6": COLORS.GREEN_LIGHT,
+    "editorBracketHighlight.foreground5": COLORS.YELLOW, //COLORS.PURPLE,
+    "editorBracketHighlight.foreground6": COLORS.YELLOW, //COLORS.GREEN_LIGHT,
     "editorBracketHighlight.unexpectedBracket.foreground": COLORS.RED,
     "editorOverviewRuler.border": COLORS.WRAPPER_BG,
     "editorOverviewRuler.selectionHighlightForeground": COLORS.GREEN_LIGHT,
@@ -586,9 +586,14 @@ export default {
     },
     {
       name: "HTML tags",
-      scope: ["entity.name.tag"],
+      scope: [
+        "punctuation.definition.tag.html",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end",
+        "entity.name.tag",
+      ],
       settings: {
-        foreground: COLORS.ORANGE,
+        foreground: COLORS.YELLOW,
       },
     },
     {
@@ -602,8 +607,8 @@ export default {
       name: "HTML/CSS attribute names",
       scope: ["entity.other.attribute-name"],
       settings: {
-        foreground: COLORS.YELLOW,
-        fontStyle: "italic",
+        foreground: COLORS.GRAY,
+        // fontStyle: "italic",
       },
     },
     {
@@ -615,6 +620,7 @@ export default {
         "meta.function-call.static",
         "meta.method-call.java meta.method",
         "meta.method.groovy",
+        "support.function",
         "support.function.any-method.lua",
         "keyword.operator.function.infix",
       ],
@@ -657,9 +663,34 @@ export default {
     },
     {
       name: "Keywords",
-      scope: ["keyword", "punctuation.definition.keyword"],
+      scope: [
+        "meta.import",
+        "keyword.control",
+        "punctuation.definition.keyword",
+      ],
       settings: {
         foreground: COLORS.ORANGE,
+      },
+    },
+    {
+      name: "true",
+      scope: ["constant.language.boolean.true"],
+      settings: {
+        foreground: COLORS.ORANGE,
+      },
+    },
+    {
+      name: "=,",
+      scope: ["meta.var", "punctuation.separator.comma"],
+      settings: {
+        foreground: COLORS.GRAY,
+      },
+    },
+    {
+      name: "CSS property name",
+      scope: ["support.type.property-name"],
+      settings: {
+        foreground: COLORS.GRAY,
       },
     },
     {
@@ -680,7 +711,7 @@ export default {
       name: "Language Built-ins",
       scope: ["support"],
       settings: {
-        fontStyle: "italic",
+        // fontStyle: "italic",
         foreground: COLORS.BLUE,
       },
     },
@@ -703,6 +734,7 @@ export default {
         fontStyle: "regular",
       },
     },
+    // MYZIURA : =
     {
       name: "Separators (key/value, namespace, inheritance, pointer, hash, slice, etc)",
       scope: [
@@ -732,7 +764,7 @@ export default {
         "punctuation.separator.annotation",
       ],
       settings: {
-        foreground: COLORS.ORANGE,
+        foreground: COLORS.GRAY,
       },
     },
     {
@@ -843,7 +875,7 @@ export default {
         "storage.type.ocaml",
       ],
       settings: {
-        fontStyle: "italic",
+        // fontStyle: "italic",
         foreground: COLORS.BLUE,
       },
     },
@@ -880,7 +912,7 @@ export default {
       name: "Non-capture operators",
       scope: ["punctuation.definition.group.capture.regexp"],
       settings: {
-        foreground: COLORS.ORANGE,
+        foreground: COLORS.TEST,
       },
     },
     {
@@ -988,6 +1020,7 @@ export default {
         foreground: COLORS.GREEN_LIGHT,
       },
     },
+    // MYZIURA { Geo }
     {
       name: "Destructuring / aliasing variable name (RHS)",
       scope: [
@@ -1078,7 +1111,7 @@ export default {
         "punctuation.definition.attribute-selector.begin.bracket.square.scss",
       ],
       settings: {
-        foreground: COLORS.GRAY,
+        foreground: COLORS.TEST,
       },
     },
     {
