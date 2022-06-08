@@ -4,6 +4,10 @@
   "description": "Darcula Plus Theme",
   "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Myziura/darcula-plus"
+  },
   "watch": {
     "build": "src/theme.js"
   },
