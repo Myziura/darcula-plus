@@ -12,7 +12,7 @@ const COLORS = Object.freeze({
 
   // strings
   GREEN: "#6A8759",
-  GREEN_LIGHT: "#A5C261",
+  GREEN_LIGHT: "#A55B52",
 
   GRAY: "#CCCCCC",
   GRAY_DARK: "#858585",
@@ -506,7 +506,7 @@ export default {
         "variable.parameter.function.language.special",
       ],
       settings: {
-        foreground: COLORS.PURPLE,
+        foreground: COLORS.ORANGE,
         fontStyle: "italic",
       },
     },
@@ -567,12 +567,20 @@ export default {
       },
     },
     {
-      name: "Constants",
-      scope: ["constant", "variable.other.constant"],
+      name: "false, null",
+      scope: ["constant"],
       settings: {
-        foreground: COLORS.PURPLE,
+        foreground: COLORS.ORANGE,
       },
     },
+    // {
+    //   name: "Constants",
+    //   scope: ["variable.other.constant"],
+    //   settings: {
+    //     // foreground: COLORS.PURPLE,
+    //     // fontStyle: "bold",
+    //   },
+    // },
     {
       name: "Constant escape sequences",
       scope: [
@@ -591,6 +599,7 @@ export default {
         "punctuation.definition.tag.begin",
         "punctuation.definition.tag.end",
         "entity.name.tag",
+        "support.class.component.vue",
       ],
       settings: {
         foreground: COLORS.YELLOW,
@@ -640,7 +649,7 @@ export default {
       ],
       settings: {
         fontStyle: "italic",
-        foreground: COLORS.GREEN_LIGHT,
+        // foreground: COLORS.GREEN_LIGHT,
       },
     },
     {
@@ -723,8 +732,8 @@ export default {
         "variable.other.predefined",
       ],
       settings: {
-        fontStyle: "regular",
-        foreground: COLORS.PURPLE,
+        // foreground: COLORS.PURPLE,
+        foreground: COLORS.ORANGE,
       },
     },
     {
@@ -995,20 +1004,27 @@ export default {
         foreground: COLORS.GRAY_DARK,
       },
     },
-    {
-      name: "Variables and object properties",
-      scope: [
-        "variable",
-        "constant.other.key.perl",
-        "support.variable.property",
-        "variable.other.constant.js",
-        "variable.other.constant.ts",
-        "variable.other.constant.tsx",
-      ],
-      settings: {
-        foreground: COLORS.GRAY,
-      },
-    },
+    // {
+    //   name: "Variables and object properties",
+    //   scope: [
+    //     "variable",
+    //     "constant.other.key.perl",
+    //     "support.variable.property",
+    //     "variable.other.constant.js",
+    //     "variable.other.constant.ts",
+    //     "variable.other.constant.tsx",
+    //   ],
+    //   settings: {
+    //     foreground: COLORS.GRAY,
+    //   },
+    // },
+    // {
+    //   name: "Variables",
+    //   scope: ["variable"],
+    //   settings: {
+    //     foreground: COLORS.GRAY,
+    //   },
+    // },
     {
       name: "Destructuring / aliasing reference name (LHS)",
       scope: [
@@ -1135,6 +1151,56 @@ export default {
       settings: {
         foreground: COLORS.GREEN,
         fontStyle: "bold",
+      },
+    },
+    // {
+    //   name: "HTML Variable, Property",
+    //   scope: [
+    //     // "variable.property",
+    //     "variable.other.property",
+    //     "variable.object.property",
+    //     "variable.other.object.property",
+    //     "variable.other.enummember",
+    //     "support.variable.property",
+    //   ],
+    //   settings: {
+    //     foreground: COLORS.PURPLE,
+    //   },
+    // },
+    {
+      name: "HTML Variable, Property",
+      scope: [
+        "expression.embbeded.vue variable.property",
+        "expression.embbeded.vue variable.other.property",
+        "expression.embbeded.vue variable.object.property",
+        "expression.embbeded.vue variable.other.object.property",
+        "expression.embbeded.vue variable.other.enummember",
+        "expression.embbeded.vue support.variable.property",
+      ],
+      settings: {
+        foreground: COLORS.PURPLE,
+      },
+    },
+    {
+      name: "JS & TS Variable, Property",
+      scope: ["js", "ts"].map((language) => [
+        `source.${language} variable.property`,
+        `source.${language} variable.other.property`,
+        `source.${language} variable.object.property`,
+        `source.${language} variable.other.object.property`,
+        `source.${language} variable.other.enummember`,
+        `source.${language} support.variable.property`,
+      ]),
+      settings: {
+        foreground: COLORS.PURPLE,
+      },
+    },
+
+    {
+      name: "Object Keys",
+      scope: "meta.object-literal.key",
+      settings: {
+        foreground: COLORS.PURPLE,
       },
     },
   ],
