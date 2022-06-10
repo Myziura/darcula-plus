@@ -12,7 +12,7 @@ const COLORS = Object.freeze({
 
   // strings
   GREEN: "#6A8759",
-  GREEN_LIGHT: "#A55B52",
+  GREEN_LIGHT: "#A5C261",
 
   GRAY: "#CCCCCC",
   GRAY_DARK: "#858585",
@@ -1183,14 +1183,16 @@ export default {
     },
     {
       name: "JS & TS Variable, Property",
-      scope: ["js", "ts"].map((language) => [
-        `source.${language} variable.property`,
-        `source.${language} variable.other.property`,
-        `source.${language} variable.object.property`,
-        `source.${language} variable.other.object.property`,
-        `source.${language} variable.other.enummember`,
-        `source.${language} support.variable.property`,
-      ]),
+      scope: ["js", "ts"]
+        .map((language) => [
+          `source.${language} variable.property`,
+          `source.${language} variable.other.property`,
+          `source.${language} variable.object.property`,
+          `source.${language} variable.other.object.property`,
+          `source.${language} variable.other.enummember`,
+          `source.${language} support.variable.property`,
+        ])
+        .flat(),
       settings: {
         foreground: COLORS.PURPLE,
       },
