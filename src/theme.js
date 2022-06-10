@@ -108,7 +108,7 @@ export default {
     "terminal.ansiWhite": COLORS.GRAY,
     focusBorder: COLORS.GRAY_DARK,
     foreground: COLORS.GRAY,
-    "selection.background": COLORS.PURPLE,
+    "selection.background": COLORS.SELECTION,
     errorForeground: COLORS.RED,
     "button.background": COLORS.SELECTION,
     "button.foreground": COLORS.GRAY,
@@ -122,9 +122,9 @@ export default {
     "input.foreground": COLORS.GRAY,
     "input.border": COLORS.WRAPPER_BG,
     "input.placeholderForeground": COLORS.GRAY_DARK,
-    "inputOption.activeBorder": COLORS.PURPLE,
+    "inputOption.activeBackground": COLORS.ORANGE_TRANSPARENT,
     "inputValidation.infoBorder": COLORS.ORANGE,
-    "inputValidation.warningBorder": COLORS.GREEN_LIGHT,
+    "inputValidation.warningBorder": COLORS.ORANGE_LIGHT,
     "inputValidation.errorBorder": COLORS.RED,
     "badge.foreground": COLORS.GRAY,
     "badge.background": COLORS.SELECTION,
@@ -149,7 +149,7 @@ export default {
     "sideBarTitle.foreground": COLORS.GRAY,
     "sideBarSectionHeader.background": COLORS.EDITOR_BG,
     "sideBarSectionHeader.border": COLORS.WRAPPER_BG,
-    "editorGroup.border": COLORS.PURPLE,
+    "editorGroup.border": COLORS.ORANGE,
     "editorGroup.dropBackground": COLORS.EDITOR_BG_TRANSPARENT,
     "editorGroupHeader.tabsBackground": COLORS.EDITOR_BG,
     "tab.activeBackground": COLORS.WRAPPER_BG,
@@ -233,9 +233,9 @@ export default {
     // "merge.currentHeaderBackground": "#50FA7B90",
     // "merge.incomingHeaderBackground": "#BD93F990",
     "editorOverviewRuler.currentContentForeground": COLORS.YELLOW,
-    "editorOverviewRuler.incomingContentForeground": COLORS.PURPLE,
+    "editorOverviewRuler.incomingContentForeground": COLORS.ORANGE,
     "panel.background": COLORS.EDITOR_BG,
-    "panel.border": COLORS.PURPLE,
+    "panel.border": COLORS.ORANGE,
     "panelTitle.activeBorder": COLORS.ORANGE,
     "panelTitle.activeForeground": COLORS.GRAY,
     "panelTitle.inactiveForeground": COLORS.GRAY_DARK,
@@ -248,7 +248,7 @@ export default {
     "statusBarItem.prominentBackground": COLORS.RED,
     "statusBarItem.prominentHoverBackground": COLORS.GREEN_LIGHT,
     "statusBarItem.remoteForeground": COLORS.EDITOR_BG,
-    "statusBarItem.remoteBackground": COLORS.PURPLE,
+    "statusBarItem.remoteBackground": COLORS.ORANGE,
     "titleBar.activeBackground": COLORS.WRAPPER_BG,
     "titleBar.activeForeground": COLORS.WRAPPER_BG,
     "titleBar.inactiveBackground": COLORS.WRAPPER_BG,
@@ -256,7 +256,7 @@ export default {
     "extensionButton.prominentForeground": COLORS.GRAY,
     // "extensionButton.prominentBackground": "#50FA7B90",
     // "extensionButton.prominentHoverBackground": "#50FA7B60",
-    "pickerGroup.border": COLORS.PURPLE,
+    "pickerGroup.border": COLORS.ORANGE,
     "pickerGroup.foreground": COLORS.BLUE,
     "debugToolBar.background": COLORS.EDITOR_BG,
     "walkThrough.embeddedEditorBackground": COLORS.EDITOR_BG,
@@ -492,8 +492,7 @@ export default {
       name: "User-defined class names",
       scope: ["entity.name.type.class", "entity.name.class"],
       settings: {
-        foreground: COLORS.BLUE,
-        fontStyle: "normal",
+        foreground: COLORS.YELLOW,
       },
     },
     {
@@ -505,10 +504,11 @@ export default {
         "variable.language punctuation.definition.variable.php",
         "variable.other.readwrite.instance.ruby",
         "variable.parameter.function.language.special",
+        "support.type.object.module",
       ],
       settings: {
         foreground: COLORS.ORANGE,
-        fontStyle: "italic",
+        // fontStyle: "italic",
       },
     },
     {
@@ -708,7 +708,7 @@ export default {
       name: 'Keyword "new"',
       scope: ["keyword.control.new", "keyword.operator.new"],
       settings: {
-        fontStyle: "bold",
+        foreground: COLORS.ORANGE,
       },
     },
     {
@@ -718,20 +718,21 @@ export default {
         foreground: COLORS.ORANGE,
       },
     },
-    {
-      name: "Language Built-ins",
-      scope: ["support"],
-      settings: {
-        // fontStyle: "italic",
-        foreground: COLORS.BLUE,
-      },
-    },
+    // {
+    //   name: "Language Built-ins",
+    //   scope: ["support"],
+    //   settings: {
+    //     // fontStyle: "italic",
+    //     // foreground: COLORS.TEST,
+    //   },
+    // },
     {
       name: "Built-in magic functions and constants",
       scope: [
         "support.function.magic",
         "support.variable",
         "variable.other.predefined",
+        "support.type.builtin",
       ],
       settings: {
         // foreground: COLORS.PURPLE,
@@ -884,6 +885,7 @@ export default {
         "storage.type.php",
         "storage.type.haskell",
         "storage.type.ocaml",
+        "support.type.primitive",
       ],
       settings: {
         // fontStyle: "italic",
@@ -970,7 +972,7 @@ export default {
     },
     {
       name: "Strings",
-      scope: ["string", "support.type.property-name"],
+      scope: ["string", "support.type.property-name.json"],
       settings: {
         foreground: COLORS.GREEN,
       },
@@ -1038,27 +1040,27 @@ export default {
         foreground: COLORS.GRAY,
       },
     },
-    {
-      name: "Destructuring / aliasing reference name (LHS)",
-      scope: [
-        "meta.import variable.other.readwrite",
-        "meta.variable.assignment.destructured.object.coffee variable",
-      ],
-      settings: {
-        fontStyle: "italic",
-        foreground: COLORS.GREEN_LIGHT,
-      },
-    },
+    // {
+    //   name: "Destructuring / aliasing reference name (LHS)",
+    //   scope: [
+    //     "meta.import variable.other.readwrite",
+    //     "meta.variable.assignment.destructured.object.coffee variable",
+    //   ],
+    //   settings: {
+    //     fontStyle: "italic",
+    //     foreground: COLORS.GREEN_LIGHT,
+    //   },
+    // },
     // MYZIURA { Geo }
     {
       name: "Destructuring / aliasing variable name (RHS)",
       scope: [
+        "entity.name.type.module",
         "meta.import variable.other.readwrite.alias",
         "meta.export variable.other.readwrite.alias",
         "meta.variable.assignment.destructured.object.coffee variable variable",
       ],
       settings: {
-        fontStyle: "normal",
         foreground: COLORS.GRAY,
       },
     },
@@ -1140,7 +1142,7 @@ export default {
         "punctuation.definition.attribute-selector.begin.bracket.square.scss",
       ],
       settings: {
-        foreground: COLORS.TEST,
+        foreground: COLORS.YELLOW,
       },
     },
     {
