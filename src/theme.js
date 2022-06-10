@@ -1,3 +1,4 @@
+const LANGUAGES = Object.freeze(["js", "ts"]);
 const COLORS = Object.freeze({
   // main
   ORANGE: "#CC8242",
@@ -376,7 +377,7 @@ export default {
       scope: ["markup.heading"],
       settings: {
         fontStyle: "bold",
-        foreground: COLORS.PURPLE,
+        foreground: COLORS.ORANGE,
       },
     },
     {
@@ -421,7 +422,7 @@ export default {
         "string.other.link.title",
       ],
       settings: {
-        foreground: COLORS.ORANGE,
+        foreground: COLORS.GREEN,
       },
     },
     {
@@ -616,7 +617,8 @@ export default {
       name: "HTML/CSS attribute names",
       scope: ["entity.other.attribute-name"],
       settings: {
-        foreground: COLORS.GRAY,
+        foreground: COLORS.ORANGE,
+        // foreground: COLORS.GRAY,
         // fontStyle: "italic",
       },
     },
@@ -896,7 +898,8 @@ export default {
         "meta.type.parameters entity.name.type",
       ],
       settings: {
-        foreground: COLORS.GREEN_LIGHT,
+        // foreground: COLORS.GREEN_LIGHT,
+        foreground: COLORS.BLUE,
       },
     },
     {
@@ -967,7 +970,7 @@ export default {
     },
     {
       name: "Strings",
-      scope: ["string"],
+      scope: ["string", "support.type.property-name"],
       settings: {
         foreground: COLORS.GREEN,
       },
@@ -1025,6 +1028,16 @@ export default {
     //     foreground: COLORS.GRAY,
     //   },
     // },
+    {
+      name: "Variables",
+      // scope: LANGUAGES.map((language) => [
+      //   `meta.embedded.line variable`,
+      // ]).flat(),
+      scope: ["meta.template.expression variable"],
+      settings: {
+        foreground: COLORS.GRAY,
+      },
+    },
     {
       name: "Destructuring / aliasing reference name (LHS)",
       scope: [
@@ -1183,16 +1196,14 @@ export default {
     },
     {
       name: "JS & TS Variable, Property",
-      scope: ["js", "ts"]
-        .map((language) => [
-          `source.${language} variable.property`,
-          `source.${language} variable.other.property`,
-          `source.${language} variable.object.property`,
-          `source.${language} variable.other.object.property`,
-          `source.${language} variable.other.enummember`,
-          `source.${language} support.variable.property`,
-        ])
-        .flat(),
+      scope: LANGUAGES.map((language) => [
+        `source.${language} variable.property`,
+        `source.${language} variable.other.property`,
+        `source.${language} variable.object.property`,
+        `source.${language} variable.other.object.property`,
+        `source.${language} variable.other.enummember`,
+        `source.${language} support.variable.property`,
+      ]).flat(),
       settings: {
         foreground: COLORS.PURPLE,
       },
