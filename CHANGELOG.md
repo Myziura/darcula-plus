@@ -6,6 +6,12 @@ All notable changes to the "darcula-plus" extension will be documented in this f
 
 <!-- ## [Unreleased] -->
 
+## [0.1.0] – 12.06.2022
+
+### Changed
+
+- Updated theme
+
 ## [0.0.6] – 10.06.2022
 
 ### Changed

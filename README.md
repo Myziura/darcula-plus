@@ -1,6 +1,6 @@
 # Darcula Plus VS Code Theme for Vue Developers
 
-The theme is not a classic Darcula, because it is based on [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) theme, so it has some differences. You may like it.
+The redizined Darcula theme, so it has some differences. You may like it.
 
 ## Development
 
@@ -14,7 +14,6 @@ The theme is not a classic Darcula, because it is based on [Dracula Official](ht
 - Additional information about theme creation you can find [here](https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme)
 - Suggestions for improving the theme are allways welcome
 - You can contact me on [LinkedId](https://www.linkedin.com/in/myziura/?locale=en_US)
-- GitHub [repository](https://github.com/Myziura/darcula-plus)
 - Made in 🇺🇦 with ❤️
 
 **Enjoy!**
