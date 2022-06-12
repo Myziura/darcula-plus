@@ -32,7 +32,8 @@ let promises = [];
 
 const fileNames = fs.readdirSync("./src/colors/raw");
 fileNames.forEach((file) => {
-  promises.push(import(`./colors/raw/${file}`));
+  const promis = import(`./colors/raw/${file}`);
+  promises.push(promis);
 });
 
 const files = await Promise.all(promises);

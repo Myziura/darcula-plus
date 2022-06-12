@@ -74,6 +74,10 @@ export default {
     "editorUnnecessaryCode.opacity": "#000000c0",
     "editorWhitespace.foreground": "#484a50",
     "editorWidget.background": "#21252B",
+
+    "editorBracketHighlight.foreground1": COLORS.YELLOW,
+    "editorBracketHighlight.foreground2": COLORS.YELLOW,
+
     "input.background": "#1d1f23",
     "list.activeSelectionBackground": "#2c313a",
     "list.activeSelectionForeground": "#d7dae0",
@@ -253,18 +257,18 @@ export default {
       },
     },
     // MYZIURA new maybe remove
-    {
-      name: "Not Classes, not Functions",
-      scope: [
-        "entity.name.class",
-        "entity.name.module",
-        "storage.identifier",
-        // "support.class",
-      ],
-      settings: {
-        foreground: COLORS.BLUE,
-      },
-    },
+    // {
+    //   name: "Not Classes, not Functions",
+    //   scope: [
+    //     "entity.name.class",
+    //     "entity.name.module",
+    //     "storage.identifier",
+    //     // "support.class",
+    //   ],
+    //   settings: {
+    //     foreground: COLORS.TEST,
+    //   },
+    // },
     // {
     //   name: "Variable Object",
     //   scope: [
@@ -287,6 +291,8 @@ export default {
         "variable.other",
         "variable.other.property",
         "variable.other.block",
+        // new
+        "entity.name.type.module",
       ],
       settings: {
         foreground: COLORS.GRAY,

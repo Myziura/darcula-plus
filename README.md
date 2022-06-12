@@ -1,6 +1,6 @@
 # Darcula Plus VS Code Theme for Vue Developers
 
-The redizined Darcula theme, so it has some differences. You may like it.
+The redesigned Darcula theme, so it has some differences. You may like it.
 
 ## Development
 
@@ -15,5 +15,12 @@ The redizined Darcula theme, so it has some differences. You may like it.
 - Suggestions for improving the theme are allways welcome
 - You can contact me on [LinkedId](https://www.linkedin.com/in/myziura/?locale=en_US)
 - Made in 🇺🇦 with ❤️
+
+## Demo
+
+![Script syntax highlight image](/assets/script.png)
+![Template syntax highlight image](/assets/template.png)
+![Styles syntax highlight image](/assets/scss.png)
+![JSON syntax highlight image](/assets/json.png)
 
 **Enjoy!**

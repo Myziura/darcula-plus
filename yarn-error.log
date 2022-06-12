@@ -31,7 +31,7 @@ npm manifest:
     "name": "darcula-plus",
     "displayName": "Darcula Plus",
     "description": "Darcula Plus Theme",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "module",
     "publisher": "myziura",
     "icon": "icon.png",
